@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MY CAR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>  
+      p.small {
+        line-height: 0.6;
+      }
+        
+    
+      body {
+      font-family: Montserrat, sans-serif; 
+      }  
+      .navbar {
+        margin-bottom: 0;
+        background-color: #FF5A4E;
+        z-index: 9999;
+        border: 0;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+      }
+      .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+      }
+      .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #FF5A4E !important;
+        background-color: #fff !important;
+      }
+      .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+      }
+
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: #f2f2f2;
+        padding: 50px;
+      }
+
+      .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        min-height: 200px;
+      }
+
+      .tab { 
+        margin-left: 10px; 
+      }
+
+      .bg-grey {
+        background-color: #f6f6f6;
+      }
+
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; 
+        }
+      }
+      .container .btn {
+        position: absolute;
+        top: 88px;
+        left: 127px;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: white;
+        color: #058C0A;
+        font-size: 12px;
+        padding: 6px 12px;
+        border: 2px solid #058C0A;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .container .btn:hover {
+        color: white;
+        background-color: #058C0A;
+        border: 2px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand text-center" href="main_page.html" style="font-size: 20px">MY CAR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="community.html">Community</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="my_page_home.html">My Page</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--TOP-->
+    <div class="container text-center" style="margin-top: 90px;">
+      <div class="row">
+        <!--CAROUSEL-->
+        <div class="col-sm-8">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <a href="review_detail.html">
+                  <img src="review_main.jpg" class="img-responsive" alt="Image">
+                  <div class="carousel-caption">
+                    <h3>Classic Car Interior</h3>
+                    <p>Make your dream car come true</p>
+                  </div>
+                </a> 
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img src="https://placehold.it/900x600?text=IMAGE" alt="Image">
+                  <div class="carousel-caption">
+                    <h3>Review Title</h3>
+                    <p>Blah Blah Blah</p>
+                  </div>
+                </a> 
+              </div>
+
+              <div class="item">
+                <a href="#">
+                  <img src="https://placehold.it/900x600?text=IMAGE" alt="Image">
+                  <div class="carousel-caption">
+                    <h3>Review Title</h3>
+                    <p>Blah Blah Blah</p>
+                  </div>
+                </a> 
+              </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <!--EVENT LINK-->
+        <div class="col-sm-4">
+          <div class="row" style="margin-bottom: 25px;">
+            <a href="#"><img src="event.png" class="img-responsive" width="360px" alt="Image"></a>
+          </div>
+          <div class="row" style="margin-bottom: 25px;">
+            <a href="#"><img src="event2.png" class="img-responsive" width="360px" alt="Image"></a>
+          </div>
+          <div class="row" style="margin-bottom: 25px;">
+            <a href="#"><img src="event3.png" class="img-responsive" width="360"alt="Image"></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <!--TODAY'S REVIEWS-->
+    <div class="container text-center">
+      <!--TITLE-->
+      <font color="#008C08">
+          <h2 class="text-left tab">Today's Reviews</h2>
+      </font>
+        <div class="container">
+      <div class="row">  
+        <br>
+        <div class="col-sm-3">
+            <a href="review_detail.html"><img src="review_main_community.jpeg" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Review Explanation</p>
+            <a href="#"><h4 class="text-left tab">Review Title</h4></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/100x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Review Explanation</p>
+            <a href="#"><h4 class="text-left tab">Review Title</h4></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/100x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Review Explanation</p>
+            <a href="#"><h4 class="text-left tab">Review Title</h4></a>
+        </div>
+       <!--BUTTONS-->
+        <div class="col-sm-3">
+          <div class="row">
+            <div class="col-sm-10">
+              <a href="tips.html">
+                <div class="row bg-grey" style="margin-bottom: 5px;" c> 
+                  <p class="text-left tab" style="margin-top: 5px;">Want some tips?</p>
+                  <h4 class="text-left tab">Tips from Experts</h4>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-10">
+              <a href="reviews.html">
+                <div class="row bg-grey" style="margin-bottom: 5px;"> 
+                  <p class="text-left tab" style="margin-top: 5px;">Want more reviews?</p>
+                  <h4 class="text-left tab">More Reviews</h4>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-10">
+              <a href="#">
+                <div class="row bg-grey" style="margin-bottom: 5px;"> 
+                  <p class="text-left tab" style="margin-top: 5px;">Time to show off!</p>
+                  <h4 class="text-left tab">Write My Review</h4>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+      <hr>
+    </div>
+
+    <!--Photos-->
+    <div class="container text-center" style="margin-bottom: 25px;">
+      <font color="#008C08">
+        <h2 class="text-left tab">Best Photos</h2>
+      </font>
+      <br>
+        <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <a href="photo_detail.html"><img src="photo_main.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+          <p class="text-left tab" style="margin-top:5px;">#interior#luxury</p>
+          <a href="#"><h5 class="text-left tab">Jack Doe</h5></a>
+        </div>
+        <div class="col-sm-2">
+          <a href="#"><img src="https://placehold.it/50x50?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+          <p class="text-left tab" style="margin-top:5px;">Detail</p>
+          <a href="#"><h5 class="text-left tab">Poster</h5></a>
+        </div>
+        <div class="col-sm-2">
+          <a href="#"><img src="https://placehold.it/50x50?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+          <p class="text-left tab" style="margin-top:5px;">Detail</p>
+          <a href="#"><h5 class="text-left tab">Poster</h5></a>
+        </div>
+        <div class="col-sm-2">
+          <a href="#"><img src="https://placehold.it/50x50?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+          <p class="text-left tab" style="margin-top:5px;">Detail</p>
+          <a href="#"><h5 class="text-left tab">Poster</h5></a>
+        </div>
+        <div class="col-sm-2">
+          <a href="#"><img src="https://placehold.it/50x50?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+          <p class="text-left tab" style="margin-top:5px;">Detail</p>
+          <a href="#"><h5 class="text-left tab">Poster</h5></a>
+        </div>
+        <div class="col-sm-2 bg-grey">
+          <a href="photos.html"><br><br>
+            <h3>Discover<br>More<br>>>><br></h3>
+            <br><br></a>
+        </div>
+      </div>
+            </div>
+      <hr>
+    </div>
+
+
+    <!--PROMOTION-->
+    <div class="container text-center">
+      <font color="#008C08">
+        <h2 class="text-left tab">Promotion</h2>
+      </font>
+      <br>
+        <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+          <p class="text-left tab" style="margin-top:5px;">Promotion Detail Explanation</p>
+          <a href="#"><h4 class="text-left tab">Promotion Title</h4></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+          <p class="text-left tab" style="margin-top:5px;">Promotion Detail Explanation</p>
+          <a href="#"><h4 class="text-left tab">Promotion Title</h4></a>
+        </div>
+        <div class="col-sm-4">
+          <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+          <p class="text-left tab" style="margin-top:5px;">Promotion Detail Explanation</p>
+          <a href="#"><h4 class="text-left tab">Promotion Title</h4></a>
+        </div>
+      </div>
+            </div>
+      <hr>
+    </div>
+
+    <!--BEST SELLERS-->
+    <div class="container text-center" style="margin-bottom: 25px;">
+      <font color="#008C08">
+        <h2 class="text-left tab">Best Sellers</h2>
+      </font>
+      <br>
+        <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="product-item">
+                <div class="product-item__image">
+                    <a href="product_detail.html"><img src="store1.jpg" class="img-responsive" style="width:100%" alt="Image">
+                    <a href="#" class="btn btn-info btn-xs" role="button">Add to cart</a></a>
+                <div class="product-item__info">
+                    <div class="product-item__info__title">
+                    <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">Kumika</p><a href="#"><h4 class="text-left tab">Kumika Car Air Fresheners Vent Clip</h4></a>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">4.5/5</p>
+                    </div>        
+                </div>
+                </div>
+            </div>
+          </div>
+        <div class="col-sm-2">
+          <div class="product-item">
+                <div class="product-item__image">
+                    <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                    <a href="#" class="btn btn-info btn-xs" role="button">Add to cart</a></a>
+                <div class="product-item__info">
+                    <div class="product-item__info__title">
+                    <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">Brand</p><a href="#"><h4 class="text-left tab">Defuser</h4></a>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">4.5/5</p>
+                    </div>        
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="product-item">
+                <div class="product-item__image">
+                    <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                    <a href="#" class="btn btn-info btn-xs" role="button">Add to cart</a></a>
+                <div class="product-item__info">
+                    <div class="product-item__info__title">
+                    <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">Brand</p><a href="#"><h4 class="text-left tab">Defuser</h4></a>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">4.5/5</p>
+                    </div>        
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="product-item">
+                <div class="product-item__image">
+                    <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                    <a href="#" class="btn btn-info btn-xs" role="button">Add to cart</a></a>
+                <div class="product-item__info">
+                    <div class="product-item__info__title">
+                    <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">Brand</p><a href="#"><h4 class="text-left tab">Defuser</h4></a>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">4.5/5</p>
+                    </div>        
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="product-item">
+                <div class="product-item__image">
+                    <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                    <a href="#" class="btn btn-info btn-xs" role="button">Add to cart</a></a>
+                <div class="product-item__info">
+                    <div class="product-item__info__title">
+                    <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">Brand</p><a href="#"><h4 class="text-left tab">Defuser</h4></a>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+                    </div>
+                    <div class="product-item__info__col">
+                    <p class="small text-left tab" style="margin-top: 5px;">4.5/5</p>
+                    </div>        
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2 bg-grey">
+          <a href="#"><br><br>
+            <h3>Discover<br>More<br>>>><br></h3>
+            <br><br></a>
+        </div>
+      </div>
+            </div>
+    </div>
+    <footer class="container-fluid text-center bg-grey">
+      <p style="font-size: 16px; text-align: left; padding-left: 25px;">Customer Service >
+        <br>
+        <font style="font-size: 30px; text-align: left; padding-left: 5px;"><b>1357-9086</b></font>
+        <br>
+        <font style="color: #A9A9A9; font-size: 14px; text-align: left; padding-left: 5px;">WEEKDAY 10:00~19:00 (Lunch 12:00~13:00 / Except holidays &amp; weekends)</font>
+      </p>
+      <p style="font-size: 14px; text-align: left; padding-left: 25px;"><b>Discover more at > </b><a href="about_company.html">About the company</a></p>
+      <p class="small">Copyright My Car. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

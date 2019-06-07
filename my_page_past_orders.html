@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MY CAR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+      body {
+      font-family: Montserrat, sans-serif; 
+      }
+      
+        }
+      p.small {
+        line-height: 0.6;
+      }
+        .btn-default {
+            width: 150px;
+            height: 30px;
+            
+        }
+        .btn-xs {
+            width: 90px;
+            text-align: center;
+        }
+        
+        .btn-group {
+            display: inline-block;
+        }
+    
+        
+      .navbar {
+        margin-bottom: 0;
+        background-color: #FF5A4E;
+        z-index: 9999;
+        border: 0;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+      }
+      .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+      }
+      .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f4511e !important;
+        background-color: #fff !important;
+      }
+      .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+      }
+        
+      .navbar1 {
+        margin-bottom: 0;
+        background-color: #FF5A4E;
+        z-index: 9999;
+        border: 0;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+      }
+      .navbar1 li a, .navbar1 .navbar1-brand {
+        color: #FF5A4E !important;
+      }
+      .navbar1-nav li a:hover, dropdown li:hover .dropbtn .navbar1-nav li.active a {
+        color: #FF5A4E !important;
+        background-color: #fff !important;
+      }
+      .navbar1-default .navbar1-toggle {
+        border-color: transparent;
+        color: #fff !important;
+      }
+
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: #f2f2f2;
+        padding: 50px;
+      }
+
+      .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        min-height: 200px;
+      }
+
+      .label-container{
+        position:fixed;
+        bottom:105px;
+        right:105px;
+        display:table;
+        visibility: hidden;
+      }
+      .label-text{
+        color:#FFF;
+        background:rgba(51,51,51,0.5);
+        display:table-cell;
+        vertical-align:middle;
+        padding:7px;
+        border-radius:3px;
+      }
+      .label-arrow{
+        display:table-cell;
+        vertical-align:middle;
+        color:#333;
+        opacity:0.5;
+      }
+      .float{
+        position:fixed;
+        width:50px;
+        height:50 px;
+        bottom:100px;
+        right:50px;
+        color:#FFF;
+        box-shadow: 2px 2px 3px #999;
+      }
+      .my-float{
+        font-size:24px;
+        margin-top:18px;
+      }
+      a.float + div.label-container {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease;
+      }
+      a.float:hover + div.label-container{
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .tab { 
+        margin-left: 10px; 
+      }
+
+      .bg-grey {
+        background-color: #f6f6f6;
+      }
+
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; 
+        }
+      }
+
+      @media (min-width: 769px) {
+        .float-right-lg {
+          float: right;
+        }
+      }
+        .col-sm-4 col-info {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+        
+    </style>
+  </head>
+  <body>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand text-center" href="main_page.html" style="font-size: 20px">MY CAR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Community</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li class="active"><a href="#">My Page</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar1 navbar-fixed-top" style="margin-top:50px; background-color: #f1f1f1; font-size: 12px; letter-spacing: 0px;">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav"> 
+            <li><a href="my_page_home.html"><b>Home</b></a></li>
+            <li><a href="my_page_scrapped.html"><b>Scrapped</b></a></li>
+            <li><a href="my_page_cart.html"><b>Cart</b></a></li>
+            <li class="active"><a href="#"><b>Past Orders</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      
+      
+    
+
+    <!--PHOTOS LIST-->
+    <div class="container text-center" style="margin-top: 120px; margin-bottom: 30px;">
+        <!--FILTER-->
+        <div class="row">
+        <div class="container text-center">
+            <font color="#008C08">
+                <h2 class="text-left tab">Orders placed in &nbsp;
+                <span class="btn-group">
+          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">Period
+            <span class="caret"></span>
+          </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="my_page_past_orders.html">Last 30 days</a></li>
+                <li><a href="my_page_past_orders.html">Past 6 months</a></li>
+                <li><a href="my_page_past_orders.html">2019</a></li>
+                <li><a href="my_page_past_orders.html">2018</a></li>
+                <li><a href="my_page_past_orders.html">2017</a></li>
+                <li><a href="my_page_past_orders.html">2016</a></li>
+            </ul>
+                </span>
+                </h2>
+                
+            </font>
+            
+        </div>
+        <div class="container text-left">
+            <div class="container text-left">
+        
+        </div>
+            </div>
+        </div>
+        
+        <br>
+     
+  <div class="row">
+                <div class="col-sm-3">
+                    <div class="col-sm-5">
+              
+                        <a href="#" class="btn btn-default btn-xs" role="button" style="float: left">Delete</a> </div>
+                    <div class="col-sm-5">
+            <a href="#" class="btn btn-default btn-xs" role="button" style="text-center">Save for later</a>
+                        </div>
+         
+               
+                    </div>
+  </div>
+           <br>
+<!-- Container (Past orders) -->
+        <div id="past orders" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="product_detail.html"><img src="pastorders.jpg" class="img-responsive" style="width:100%" alt="Image">
+        </a>
+      </div>
+        <div class="col-sm-1">
+            </div>
+      <div class="col-sm-4">
+          <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">High Road</p>
+          <a href="#"><h4 class="text-left tab"><input type="checkbox" value="" style="width: 20px; height: 20px;">&nbsp;Car Organizer for Kids with Cooler and Snack Tray</h4></a>
+          <p class="small text-left tab" style="margin-top: 5px;">$39.99</p>
+          <p class="small text-left tab" style="margin-top: 5px;"><span class="glyphicon glyphicon-star" style="color:#FF5A4E"></span>&nbsp;5/5</p>
+      <br> <a href="product_detail.html">
+        
+              <a href="#" class="btn btn-default btn-sm" role="button" style="float: left">Buy it again</a></a>  
+        </div>
+      
+        <div class="col-sm-4">
+            <br>
+          <div class="row">
+            <a href="#" class="btn btn-default btn-sm" role="button" style="float: left">Order detail</a></div>
+            <div class="row"><a href="#" class="btn btn-default btn-sm" role="button" style="float: left">Write a review</a></div>
+            <div class="row"><a href="#" class="btn btn-default btn-sm" role="button" style="float: left">Archive order</a></div>
+      </div>
+    </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+        </div>
+        <div id="past orders" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="product_detail.html"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+        </a>
+      </div>
+        <div class="col-sm-1">
+            </div>
+      <div class="col-sm-4">
+          <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">Brand</p>
+          <a href="#"><h4 class="text-left tab"><input type="checkbox" value="" style="width: 20px; height: 20px;">&nbsp;Defuser</h4></a>
+          <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+          <p class="small text-left tab" style="margin-top: 5px;"><span class="glyphicon glyphicon-star" style="color:#FF5A4E"></span>&nbsp;5/5</p>
+      <br> <a href="product_detail.html">
+        
+              <a href="#" class="btn btn-default btn-sm" role="button" style="float: left">Buy it again</a></a>  
+        </div>
+        
+        <div class="col-sm-3">
+            <br>
+          <div class="row">
+            <a href="#" class="btn btn-default btn-sm" role="button" style="float: left">Order detail</a></div>
+            <div class="row"><a href="#" class="btn btn-default btn-sm" role="button" style="float: left">Write a review</a></div>
+            <div class="row"><a href="#" class="btn btn-default btn-sm" role="button" style="float: left">Archive order</a></div>
+      </div>
+    </div>
+        </div> 
+        <br>
+          <br>
+      <!--TITLE-->
+        <hr>
+      <br>
+            <font color="#008C08">
+                <h2 class="text-left tab">Recommended items for you...</h2>
+            </font>
+<div id="recommended" class="container-fluid">
+      <div class="row">  
+        <br>
+        <div class="col-sm-3">
+        <div class="product-item">
+            <div class="product-item__image">
+                <a href="#"><img src="pastorders2.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+            <div class="product-item__info">
+                <div class="product-item__info__title">
+                <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">HOTOR</p><a href="#"><h4 class="text-left tab">Multipurpose Trash Bin for Car - Grey</h4></a>
+                </div>
+                <div class="product-item__info__col">
+                <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+                </div>
+                <div class="product-item__info__col">
+                <p class="small text-left tab" style="margin-top: 5px;"><span class="glyphicon glyphicon-star" style="color:#FF5A4E"></span>4.9/5</p>
+                </div>        
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="product-item">
+            <div class="product-item__image">
+                <a href="#"><img src="recommended.jpg" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+            <div class="product-item__info">
+                <div class="product-item__info__title">
+                <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">JALIELL</p><a href="#"><h4 class="text-left tab">9 Storage Pockets Car Back Seat Protector (2 Pack)</h4></a>
+                </div>
+                <div class="product-item__info__col">
+                <p class="small text-left tab" style="margin-top: 5px;">$16.99</p>
+                </div>
+                <div class="product-item__info__col">
+                <p class="small text-left tab" style="margin-top: 5px;"><span class="glyphicon glyphicon-star" style="color:#FF5A4E"></span>4.9/5</p>
+                </div>        
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="product-item">
+            <div class="product-item__image">
+                <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+            <div class="product-item__info">
+                <div class="product-item__info__title">
+                <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">Brand</p><a href="#"><h4 class="text-left tab">Defuser</h4></a>
+                </div>
+                <div class="product-item__info__col">
+                <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+                </div>
+                <div class="product-item__info__col">
+                <p class="small text-left tab" style="margin-top: 5px;"><span class="glyphicon glyphicon-star" style="color:#FF5A4E"></span>4.9/5</p>
+                </div>        
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="product-item">
+            <div class="product-item__image">
+                <a href="#"><img src="https://placehold.it/120x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+                </a>
+            <div class="product-item__info">
+                <div class="product-item__info__title">
+                <p class="small text-left tab" style="margin-top: 5px; color: gainsboro">Brand</p><a href="#"><h4 class="text-left tab">Defuser</h4></a>
+                </div>
+                <div class="product-item__info__col">
+                <p class="small text-left tab" style="margin-top: 5px;">17,100</p>
+                </div>
+                <div class="product-item__info__col">
+                <p class="small text-left tab" style="margin-top: 5px;"><span class="glyphicon glyphicon-star" style="color:#FF5A4E"></span>4.9/5</p>
+                </div>        
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>        
+        </div>       
+    </div>
+
+    <footer class="container-fluid text-center bg-grey">
+      <p style="font-size: 16px; text-align: left; padding-left: 25px;">Customer Service >
+        <br>
+        <font style="font-size: 30px; text-align: left; padding-left: 5px;"><b>1357-9086</b></font>
+        <br>
+        <font style="color: #A9A9A9; font-size: 14px; text-align: left; padding-left: 5px;">WEEKDAY 10:00~19:00 (Lunch 12:00~13:00 / Except holidays &amp; weekends)</font>
+      </p>
+      <p style="font-size: 14px; text-align: left; padding-left: 25px;"><b>Discover more at > </b><a href="about_company.html">About the company</a></p>
+      <p class="small">Copyright My Car. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

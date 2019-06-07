@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>MY CAR</title>
+    <style>
+      p.small {
+        line-height: 0.6;
+      }
+      body {
+        font-family: Montserrat, sans-serif; 
+      }
+      .navbar {
+        margin-bottom: 0;
+        background-color: #FF5A4E;
+        z-index: 9999;
+        border: 0;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+      }
+      .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+      }
+      .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #FF5A4E !important;
+        background-color: #fff !important;
+      }
+      .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+      }
+      .navbar1 {
+        margin-bottom: 0;
+        background-color: #FF5A4E;
+        z-index: 9999;
+        border: 0;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+      }
+      .navbar1 li a, .navbar1 .navbar1-brand {
+        color: #FF5A4E !important;
+      }
+      .navbar1-nav li a:hover, dropdown li:hover .dropbtn .navbar1-nav li.active a {
+        color: #FF5A4E !important;
+        background-color: #fff !important;
+      }
+      .navbar1-default .navbar1-toggle {
+        border-color: transparent;
+        color: #fff !important;
+      }
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: #f2f2f2;
+        padding: 50px;
+      }
+
+      .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        min-height: 200px;
+      }
+
+      .label-container{
+        position:fixed;
+        bottom:105px;
+        right:105px;
+        display:table;
+        visibility: hidden;
+      }
+      .label-text{
+        color:#FFF;
+        background:rgba(51,51,51,0.5);
+        display:table-cell;
+        vertical-align:middle;
+        padding:7px;
+        border-radius:3px;
+      }
+      .label-arrow{
+        display:table-cell;
+        vertical-align:middle;
+        color:#333;
+        opacity:0.5;
+      }
+      .float{
+        position:fixed;
+        width:50px;
+        height:50 px;
+        bottom:100px;
+        right:50px;
+        background-color:#008C08;
+        color:#FFF;
+        box-shadow: 2px 2px 3px #999;
+      }
+      .my-float{
+        font-size:24px;
+        margin-top:18px;
+      }
+      a.float + div.label-container {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease;
+      }
+      a.float:hover + div.label-container{
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .tab { 
+        margin-left: 10px; 
+      }
+
+      .bg-grey {
+        background-color: #f6f6f6;
+      }
+
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; 
+        }
+      }
+
+      @media (min-width: 769px) {
+        .float-right-lg {
+          float: right;
+        }
+      }
+      .sidebar {
+        width: 500px;
+        height: 100%;
+        min-height: 500px;
+        overflow: auto;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20%;
+      }
+
+      .main {
+        width: 60%;
+        height: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main,
+      .sidebar {
+        padding: 15px;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      body {
+        font-size: 16px;
+        box-sizing: border-box;
+        font-family: Montserrat, sans-serif;
+      }
+
+      code, pre {
+        background-color: #ccc;
+        padding: 0 3px;
+        border-radius: 5px;
+      }
+
+      .bottom {
+        justify-self: bottom;
+      }
+    </style>   
+  </head>
+  <body>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand text-center" href="main_page.html" style="font-size: 20px">MY CAR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="community.html">Community</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="my_page_home.html">My Page</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar1 navbar-fixed-top" style="margin-top:50px; background-color: #f1f1f1; font-size: 12px; letter-spacing: 0px;">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav"> 
+            <li><a href="community.html"><b>Home</b></a></li>
+            <li class="active"><a href="reviews.html"><b>Reviews</b></a></li>
+            <li><a href="tips.html"><b>Tips</b></a></li>
+            <li><a href="photos.html"><b>Photos</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <div class="main" style="margin-top:125px; padding-left: 200px;">
+        <img src="review_main.jpg" class="img-responsive" alt="Image">
+        <br/>
+        <div class="container tab">
+          <h4> <font color= #008C08>Type </font>   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  <font color= #818181>Convertible</font></h4>
+          <hr  size="10" width="50%" align="left">
+          <h4> <font color= #008C08>Vehicle</font>  &nbsp&nbsp&nbsp   <font color= #818181>Classic Car</font> </h4>
+          <hr  size="10" width="50%" align="left">
+          <h4> <font color= #008C08>Style</font>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   <font color= #818181>Vintage</font> </h4>
+          <hr  size="10" width="50%" align="left">
+          <h4> <font color= #008C08>Budget</font>   &nbsp&nbsp&nbsp   <font color= #818181>$ 1,000</font> </h4>
+          <hr  size="10" width="50%" align="left">
+        </div>
+        <p>I always had this fantasy about classic car. Luckily, I found this beautiful classic car at a garage sale! :):):) Yay! It was in good condition, farily priced. Who can say no to such car? Everything was perfect except the color. So, I decided to go through some renovation by myself.And finally, my dream car has come ture. </p><br>
+        <img src="review_detail_1.jpg" class="img-responsive" style="width:100%" alt="Image">
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-sm-2" style="margin-left: 10px;">
+            <a href="#">
+              <img src="review_detail_2.jpeg" class="img-circle" style="width:100%" alt="Image">
+            </a>
+          </div>
+          <div class="col-sm-2" style="margin-left: 10px;">
+            <a href="#">
+              <img src="review_detail_3.jpeg" class="img-circle" style="width:100%" alt="Image">
+            </a>
+          </div>
+        </div>
+        <br>
+        <p>I first started with the car sheet. I really liked the color of this sheet. It was really hard to find the right red I was looking for. It took me almost a week finding the perfect car sheet. But I finally got it!</p><br>
+        <img src="review_detail_4.jpg" class="img-responsive" alt="Image">
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-sm-2" style="margin-left: 10px;">
+            <a href="#">
+              <img src="review_detail_5.jpg" class="img-circle" style="width:100%" alt="Image">
+            </a>
+          </div>
+          <div class="col-sm-2" style="margin-left: 10px;">
+            <a href="#">
+              <img src="review_detail_6.jpg" class="img-circle" style="width:100%" alt="Image">
+            </a>
+          </div>
+          <div class="col-sm-2" style="margin-left: 10px;">
+            <a href="#">
+              <img src="review_detail_7.jpeg" class="img-circle" style="width:100%" alt="Image">
+            </a>
+          </div>
+        </div>
+        <br>
+        <p>Next, I changed the instrument panel to add more classic atmosphere to my dream car. That's it for today! I will try to update if I upgrade my car later. Thanks for reading :)</p>
+      </div>
+
+      <div class="sidebar" style="margin-top:100px; padding-left: 50px; padding-right: 50px;">
+        <font color="#008C08">  
+          <h2>Title</h2>
+        </font>
+        <h3 style="margin-left: 20px;">Make Your Dream Car<br>Come True</h3>
+        <font color="#008C08">  
+          <h3>Author</h3>
+        </font>
+        <p><t style="margin-left: 20px;">John Doe</t></p>
+        <div class="text-center">
+          <img src="img_avatar3.png" class="img-circle" style="width:50%; align-items: center;" alt="Image">
+        </div>
+        <br>
+        <div class="text-center">
+          <a href="#" type=button class="btn btn-default btn-lg" style="margin-top: 20px; width:100px;"><span class="glyphicon glyphicon-heart"></span> Like</a>
+          <a href="#" type=button class="btn btn-default btn-lg" style="margin-top: 20px; width:100px;"><span class="glyphicon glyphicon-bookmark"></span> Scrap</a>
+          <a href="#" type=button class="btn btn-default btn-lg" style="margin-top: 20px; width:100px;"><span class="glyphicon glyphicon-share-alt"></span> Share</a>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <!--COMMENTS-->
+    <div class="container">
+      <hr>
+      <font color="#008C08">
+        <h3 style="padding: 10px;">Comments</h3>
+      </font>
+      <div class="media" style="padding: 20px;">
+        <div class="media-left">
+          <img src="img_avatar1.png" class="media-object" style="width:45px">
+        </div>
+        <div class="media-body">
+          <font color= #818181><h4 class="media-heading">Jack Doe <small><i>Posted on February 19, 2016</i></small></h4></font>
+          <p>Wow! It is so cool! How long did it take for you to finish all this?</p>  
+          <!-- Nested media object -->
+          <div class="media">
+            <div class="media-left">
+              <img src="img_avatar3.png" class="media-object" style="width:45px">
+            </div>
+            <div class="media-body">
+              <font color= #818181><h4 class="media-heading">John Doe <small><i>Posted on February 20, 2016</i></small></h4></font>
+              <p>A month, I guess?</p>
+              <!-- Nested media object -->
+              <div class="media">
+                <div class="media-left">
+                  <img src="img_avatar1.png" class="media-object" style="width:45px">
+                </div>
+                <div class="media-body">
+                  <font color= #818181><h4 class="media-heading">Jack Doe <small><i>Posted on February 21, 2016</i></small></h4></font>
+                  <p>Such a great job on such a short term! Remarkable!</p>
+                </div>
+              </div> 
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <img src="img_avatar4.png" class="media-object" style="width:45px">
+            </div>
+            <div class="media-body">
+              <font color= #818181><h4 class="media-heading">Jane Doe <small><i>Posted on February 20, 2016</i></small></h4></font>
+              <p>WOW!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="media" style="padding: 20px;">
+        <div class="media-left">
+          <img src="img_avatar5.png" class="media-object" style="width:45px">
+        </div>
+        <div class="media-body">
+          <font color= #818181><h4 class="media-heading">Alice Doe <small><i>Posted on February 19, 2016</i></small></h4></font>
+          <p>Where was the garage sale???</p>
+        </div>
+      </div>
+      <div class="media" style="margin-top: 10px; padding: 10px;">
+        <div class="form-group">
+          <font color= #818181><label for="comment">Write your comment</label></font>
+          <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!--SIMILAR PHOTOS-->
+    <div class="container text-center" style="margin-bottom: 30px;">
+      <hr>
+      <font color="#008C08">
+          <h2 class="text-left tab"  style="margin-top: 20px;">Similar Reviews</h2>
+      </font>
+      <!--LIST-->
+      <div class="row">  
+        <br>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+      </div>
+      <div class="row">  
+        <br>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+      </div>
+      <div class="row">  
+        <br>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-3">
+            <a href="#"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+      </div>
+    </div>
+
+    <!--POST BUTTON-->
+    <a href="#" class="float btn btn-lg" style="margin-bottom: 55px">
+      <span class="glyphicon glyphicon-pencil"></span>
+    </a>
+    <div class="label-container" style="margin-bottom: 55px">
+      <div class="label-text">Write review</div>
+      <i class="fa fa-play label-arrow"></i>
+    </div>
+    <a href="#" class="float btn btn-lg">
+      <span class="glyphicon glyphicon-camera"></span>
+    </a>
+    <div class="label-container">
+      <div class="label-text">Post photo</div>
+      <i class="fa fa-play label-arrow"></i>
+    </div>
+      
+    <footer class="container-fluid text-center bg-grey">
+      <p style="font-size: 16px; text-align: left; padding-left: 25px;">Customer Service >
+        <br>
+        <font style="font-size: 30px; text-align: left; padding-left: 5px;"><b>1357-9086</b></font>
+        <br>
+        <font style="color: #A9A9A9; font-size: 14px; text-align: left; padding-left: 5px;">WEEKDAY 10:00~19:00 (Lunch 12:00~13:00 / Except holidays &amp; weekends)</font>
+      </p>
+      <p style="font-size: 14px; text-align: left; padding-left: 25px;"><b>Discover more at > </b><a href="about_company.html">About the company</a></p>
+      <p class="small">Copyright My Car. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

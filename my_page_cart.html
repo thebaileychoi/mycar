@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MY CAR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+      body {
+      font-family: Montserrat, sans-serif; 
+      }
+      p.small {
+        line-height: 0.6;
+      }
+      .navbar {
+        margin-bottom: 0;
+        background-color: #FF5A4E;
+        z-index: 9999;
+        border: 0;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+      }
+      .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+      }
+      .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f4511e !important;
+        background-color: #fff !important;
+      }
+      .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;
+      }
+        
+      .navbar1 {
+        margin-bottom: 0;
+        background-color: #FF5A4E;
+        z-index: 9999;
+        border: 0;
+        font-size: 14px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 4px;
+        border-radius: 0;
+        font-family: Montserrat, sans-serif;
+      }
+      .navbar1 li a, .navbar1 .navbar1-brand {
+        color: #FF5A4E !important;
+      }
+      .navbar1-nav li a:hover, dropdown li:hover .dropbtn .navbar1-nav li.active a {
+        color: #FF5A4E !important;
+        background-color: #fff !important;
+      }
+      .navbar1-default .navbar1-toggle {
+        border-color: transparent;
+        color: #fff !important;
+      }
+        
+
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: #f2f2f2;
+        padding: 50px;
+      }
+
+      .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        min-height: 200px;
+      }
+
+      .label-container{
+        position:fixed;
+        bottom:105px;
+        right:105px;
+        display:table;
+        visibility: hidden;
+      }
+      .label-text{
+        color:#FFF;
+        background:rgba(51,51,51,0.5);
+        display:table-cell;
+        vertical-align:middle;
+        padding:7px;
+        border-radius:3px;
+      }
+      .label-arrow{
+        display:table-cell;
+        vertical-align:middle;
+        color:#333;
+        opacity:0.5;
+      }
+      .float{
+        position:fixed;
+        width:50px;
+        height:50 px;
+        bottom:100px;
+        right:50px;
+        color:#FFF;
+        box-shadow: 2px 2px 3px #999;
+      }
+      .my-float{
+        font-size:24px;
+        margin-top:18px;
+      }
+      a.float + div.label-container {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease;
+      }
+      a.float:hover + div.label-container{
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .tab { 
+        margin-left: 10px; 
+      }
+
+      .bg-grey {
+        background-color: #f6f6f6;
+      }
+
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; 
+        }
+      }
+
+      @media (min-width: 769px) {
+        .float-right-lg {
+          float: right;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--NAVIGATION BAR-->
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand text-center" href="main_page.html" style="font-size: 20px">MY CAR</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="community.html">Community</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li class="active"><a href="my_page_home.html">My Page</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar1 navbar-fixed-top" style="margin-top:50px; background-color: #f1f1f1; font-size: 12px; letter-spacing: 0px;">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav"> 
+            <li><a href="my_page_home.html"><b>Home</b></a></li>
+            <li><a href="my_page_scrapped.html"><b>Scrapped</b></a></li>
+            <li class="active"><a href="#"><b>Cart</b></a></li>
+            <li><a href="my_page_past_orders.html"><b>Past Orders</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--PRODUCTS LIST-->
+    <div class="container text-center" style="margin-top: 120px; margin-bottom: 30px;">
+      <div class="container">
+        <div class="row">  
+          <br>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="store_cart.jpeg" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Kumika</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Kumika Car Air Fresheners Vent Clip</h4></a></label>  
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+        </div>
+        <div class="row">  
+          <br>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+        </div>
+        <div class="row">  
+          <br>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <a href="product_detail.html"><img src="https://placehold.it/80x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></a>
+            <p class="text-left tab" style="margin-top:5px;">Brand</p>
+            <div class="checkbox text-left" >
+              <label><input type="checkbox" value="" style="vertical-align: middle; width: 30px; height: 30px;"><a href="#"><h4 class="text-left tab">Product</h4></a></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--CHECKOUT BUTTON-->
+    <a href="#" class="float btn-success btn-lg" style="margin-bottom: 55px">
+      <span class="glyphicon glyphicon-credit-card"></span>
+    </a>
+    <div class="label-container" style="margin-bottom: 55px">
+      <div class="label-text">Check out</div>
+      <i class="fa fa-play label-arrow"></i>
+    </div>
+    <!--DELETE-->
+    <a href="#" class="float btn-danger btn-lg">
+      <span class="glyphicon glyphicon-trash"></span>
+    </a>
+    <div class="label-container">
+      <div class="label-text">Delete</div>
+      <i class="fa fa-play label-arrow"></i>
+    </div>
+      </div>
+      
+    <footer class="container-fluid text-center bg-grey">
+      <p style="font-size: 16px; text-align: left; padding-left: 25px;">Customer Service >
+        <br>
+        <font style="font-size: 30px; text-align: left; padding-left: 5px;"><b>1357-9086</b></font>
+        <br>
+        <font style="color: #A9A9A9; font-size: 14px; text-align: left; padding-left: 5px;">WEEKDAY 10:00~19:00 (Lunch 12:00~13:00 / Except holidays &amp; weekends)</font>
+      </p>
+      <p style="font-size: 14px; text-align: left; padding-left: 25px;"><b>Discover more at > </b><a href="about_company.html">About the company</a></p>
+      <p class="small">Copyright My Car. All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
